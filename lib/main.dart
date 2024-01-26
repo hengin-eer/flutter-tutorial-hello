@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker_plus/flutter_datetime_picker_plus.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hello/page2.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() {
@@ -197,6 +198,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: const TextStyle(color: Colors.black, fontSize: 18.0),
               ),
             ),
+            Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all<Color?>(Colors.teal[100]),
+                  ),
+                  onPressed: () => {
+                    Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (context) {
+                      return Page2();
+                    }))
+                  },
+                  child: const Text(
+                    'Go to page2.',
+                    style: TextStyle(color: Colors.white, fontSize: 18.0),
+                  ),
+                ))
           ],
         ),
       ),
