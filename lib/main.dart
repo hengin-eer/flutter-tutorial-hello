@@ -208,11 +208,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () => {
                     Navigator.of(context)
                         .push(MaterialPageRoute(builder: (context) {
-                      return Page2();
+                      return const Page2(
+                        title: "TestPages",
+                      );
                     }))
                   },
                   child: const Text(
-                    'Go to page2.',
+                    'Go to TestPage(PageView).',
                     style: TextStyle(color: Colors.white, fontSize: 18.0),
                   ),
                 ))
